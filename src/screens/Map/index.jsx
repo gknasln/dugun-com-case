@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from "react";
-import { GoogleMap, LoadScript, OverlayView } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, OverlayView, OverlayViewF } from '@react-google-maps/api';
 import { useNavigate } from "react-router-dom";
 
 import AnimatedField from "../../components/AnimatedField"; 
@@ -284,7 +284,7 @@ export default function Map() {
 
 function Overlay({coord, index, isDone}) {
   return (
-    <OverlayView
+    <OverlayViewF
       position={coord}
       mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
     >
@@ -308,6 +308,6 @@ function Overlay({coord, index, isDone}) {
         }
         {index === 0 ? "SP" : "WP " + (index+1)}
       </div>
-    </OverlayView>
+    </OverlayViewF>
   );
 }
