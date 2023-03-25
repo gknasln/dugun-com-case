@@ -1,0 +1,41 @@
+@import "./_variables.scss";
+
+.page{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  
+  .content{
+    width: 300px;
+    padding: 1% 2%;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  
+  .checkpointButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+
+  .checkpointButton svg{
+    margin-bottom: 1px;
+    margin-right: 3px;
+  }
+
+
+  @media (min-width: $breakpoint-tablet) {
+    &{
+      background-color: #F4F6F8;
+    }
+
+    .content{
+      box-shadow: 0px 3px 6px #00000029;
+    }
+  }
+}
+ 
